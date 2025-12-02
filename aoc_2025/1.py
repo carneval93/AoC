@@ -11,11 +11,10 @@ for inst in inp:
     if 'R' in inst:
         step = int(inst.split('R')[1])
         q_list.rotate(-1*step)
-        zero_rotations = step // len(q_list)
     else:
         step = int(inst.split('L')[1])
         q_list.rotate(step)
-        zero_rotations = step // len(q_list)
+    zero_rotations = step // len(q_list)
     after = q_list[0]
     p2 += zero_rotations
     if after == 0:
