@@ -1,8 +1,5 @@
-import math
-
-
 def get_pythagoras_result(Xv, Yv, Zv, Xc, Yc, Zc):
-    return math.sqrt((Xv - Xc) * (Xv - Xc) + (Yv - Yc) * (Yv - Yc) + (Zv - Zc) * (Zv - Zc))
+    return (Xv - Xc) * (Xv - Xc) + (Yv - Yc) * (Yv - Yc) + (Zv - Zc) * (Zv - Zc)
 
 
 inp = open("../input.txt").read().splitlines()
@@ -17,7 +14,6 @@ for i in inp:
 base_boxes = curr_boxes.copy()
 packages = set()
 
-processed = set()
 
 distance_list = []
 distance_keys = set()
